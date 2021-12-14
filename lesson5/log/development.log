@@ -132,3 +132,298 @@ Processing by Rails::WelcomeController#index as HTML
 Completed 200 OK in 21ms (Views: 18.7ms | ActiveRecord: 0.0ms | Allocations: 1174)
 
 
+Started GET "/" for ::1 at 2021-12-14 14:17:58 +0200
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/denver932/.rvm/gems/ruby-3.0.2/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/denver932/.rvm/gems/ruby-3.0.2/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 6.9ms | Allocations: 491)
+Completed 200 OK in 21ms (Views: 11.6ms | ActiveRecord: 0.0ms | Allocations: 3627)
+
+
+Started GET "/" for ::1 at 2021-12-14 14:18:02 +0200
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/denver932/.rvm/gems/ruby-3.0.2/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/denver932/.rvm/gems/ruby-3.0.2/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 5.5ms | Allocations: 261)
+Completed 200 OK in 9ms (Views: 6.8ms | ActiveRecord: 0.0ms | Allocations: 1175)
+
+
+Started GET "/articles/1" for ::1 at 2021-12-14 14:18:02 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/articles/1"):
+  
+Started GET "/articles/1" for ::1 at 2021-12-14 14:18:03 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/articles/1"):
+  
+Started GET "/articles" for ::1 at 2021-12-14 14:18:05 +0200
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 143)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/denver932/Code/Internship/lesson5/public/packs
+[Webpacker] Hash: 2034dd941d5476d8645c
+Version: webpack 4.46.0
+Time: 1453ms
+Built at: 12/14/2021 2:18:10 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-3dd0dc24d9c39bc09227.js    125 KiB  application  [emitted] [immutable]  application
+js/application-3dd0dc24d9c39bc09227.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-3dd0dc24d9c39bc09227.js js/application-3dd0dc24d9c39bc09227.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+  Rendered layout layouts/application.html.erb (Duration: 4264.6ms | Allocations: 15239)
+Completed 200 OK in 4269ms (Views: 4267.8ms | ActiveRecord: 0.0ms | Allocations: 16679)
+
+
+  [1m[35m (19.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5546402741866282380)[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateAppointments (20211214122751)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(5546402741866282380)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5546402741866282380)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateAppointments (20211214122751)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (7.6ms)[0m  [1m[35mCREATE TABLE "appointments" ("id" bigserial primary key, "physician_id" integer, "patient_id" integer, "appointment_date" timestamp, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20211214122751"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-12-14 12:31:10.415244"], ["updated_at", "2021-12-14 12:31:10.415244"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(5546402741866282380)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAppointment Create (2.3ms)[0m  [1m[32mINSERT INTO "appointments" ("id", "physician_id", "patient_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["id", 1], ["physician_id", 1], ["patient_id", 1], ["created_at", "2021-12-14 12:33:23.597652"], ["updated_at", "2021-12-14 12:33:23.597652"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAppointment Create (2.1ms)[0m  [1m[32mINSERT INTO "appointments" ("id", "physician_id", "patient_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["id", 1], ["physician_id", 1], ["patient_id", 1], ["created_at", "2021-12-14 12:34:20.401243"], ["updated_at", "2021-12-14 12:34:20.401243"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAppointment Create (1.0ms)[0m  [1m[32mINSERT INTO "appointments" ("id", "physician_id", "patient_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["id", 1], ["physician_id", 1], ["patient_id", 1], ["created_at", "2021-12-14 12:34:57.922555"], ["updated_at", "2021-12-14 12:34:57.922555"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mAppointment Load (1.2ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments" ORDER BY "appointments"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5546402741866282380)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePhysicians (20211214124843)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (4.7ms)[0m  [1m[35mCREATE TABLE "physicians" ("id" bigserial primary key, "name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20211214124843"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreatePatients (20211214124925)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.7ms)[0m  [1m[35mCREATE TABLE "patients" ("id" bigserial primary key, "name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20211214124925"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT pg_advisory_unlock(5546402741866282380)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5546402741866282380)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePatients (20211214124925)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (6.3ms)[0m  [1m[35mDROP TABLE "patients"[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.5ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20211214124925"]]
+  [1m[36mTRANSACTION (2.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(5546402741866282380)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5546402741866282380)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePhysicians (20211214124843)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.8ms)[0m  [1m[35mDROP TABLE "physicians"[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.6ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20211214124843"]]
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(5546402741866282380)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5546402741866282380)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateAppointments (20211214122751)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.6ms)[0m  [1m[35mDROP TABLE "appointments"[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.6ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20211214122751"]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(5546402741866282380)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5546402741866282380)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(5546402741866282380)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5546402741866282380)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to Physician (20211214125524)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(5546402741866282380)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5546402741866282380)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to Physician (20211214125524)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(5546402741866282380)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5546402741866282380)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to Physician (20211214125524)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(5546402741866282380)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5546402741866282380)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to Physician (20211214125524)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (5.7ms)[0m  [1m[35mCREATE TABLE "physicians" ("id" bigserial primary key, "name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE TABLE "patients" ("id" bigserial primary key, "name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE TABLE "appointments" ("id" bigserial primary key, "physician_id" bigint, "patient_id" bigint, "appointment_date" timestamp, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE INDEX "index_appointments_on_physician_id" ON "appointments" ("physician_id")[0m
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE INDEX "index_appointments_on_patient_id" ON "appointments" ("patient_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20211214125524"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(5546402741866282380)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5546402741866282380)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to Physician (20211214125524)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.7ms)[0m  [1m[35mDROP TABLE "appointments"[0m
+  [1m[35m (1.0ms)[0m  [1m[35mDROP TABLE "patients"[0m
+  [1m[35m (0.9ms)[0m  [1m[35mDROP TABLE "physicians"[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.5ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20211214125524"]]
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(5546402741866282380)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5546402741866282380)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateAppointments (20211214130243)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (6.2ms)[0m  [1m[35mCREATE TABLE "physicians" ("id" bigserial primary key, "name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE TABLE "patients" ("id" bigserial primary key, "name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (5.9ms)[0m  [1m[35mCREATE TABLE "appointments" ("id" bigserial primary key, "physician_id" bigint, "patient_id" bigint, "appointment_date" timestamp, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE INDEX "index_appointments_on_physician_id" ON "appointments" ("physician_id")[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE INDEX "index_appointments_on_patient_id" ON "appointments" ("patient_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20211214130243"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(5546402741866282380)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhysician Create (1.4ms)[0m  [1m[32mINSERT INTO "physicians" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Test"], ["created_at", "2021-12-14 13:13:29.630643"], ["updated_at", "2021-12-14 13:13:29.630643"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPatient Create (0.8ms)[0m  [1m[32mINSERT INTO "patients" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Test"], ["created_at", "2021-12-14 13:13:50.696674"], ["updated_at", "2021-12-14 13:13:50.696674"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAppointment Create (2.8ms)[0m  [1m[32mINSERT INTO "appointments" ("physician_id", "patient_id", "appointment_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["physician_id", 1], ["patient_id", 1], ["appointment_date", "2001-11-11 00:00:00"], ["created_at", "2021-12-14 13:22:57.361126"], ["updated_at", "2021-12-14 13:22:57.361126"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPatient Create (0.4ms)[0m  [1m[32mINSERT INTO "patients" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Test2"], ["created_at", "2021-12-14 13:23:22.673922"], ["updated_at", "2021-12-14 13:23:22.673922"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAppointment Create (0.4ms)[0m  [1m[32mINSERT INTO "appointments" ("physician_id", "patient_id", "appointment_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["physician_id", 1], ["patient_id", 2], ["appointment_date", "2001-11-11 00:00:00"], ["created_at", "2021-12-14 13:23:31.196097"], ["updated_at", "2021-12-14 13:23:31.196097"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPatient Load (0.5ms)[0m  [1m[34mSELECT "patients".* FROM "patients"[0m
+  [1m[36mAppointment Load (0.5ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments"[0m
+  [1m[36mPhysician Load (0.4ms)[0m  [1m[34mSELECT "physicians".* FROM "physicians"[0m
+  [1m[36mPatient Load (0.6ms)[0m  [1m[34mSELECT "patients".* FROM "patients"[0m
+  [1m[36mPhysician Load (0.4ms)[0m  [1m[34mSELECT "physicians".* FROM "physicians"[0m
+  [1m[36mPhysician Load (0.4ms)[0m  [1m[34mSELECT "physicians".* FROM "physicians"[0m
+  [1m[36mPatient Load (0.4ms)[0m  [1m[34mSELECT "patients".* FROM "patients"[0m
+  [1m[36mAppointment Load (0.5ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments"[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPatient Create (0.6ms)[0m  [1m[32mINSERT INTO "patients" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Test3"], ["created_at", "2021-12-14 13:45:39.672652"], ["updated_at", "2021-12-14 13:45:39.672652"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAppointment Create (2.2ms)[0m  [1m[32mINSERT INTO "appointments" ("id", "physician_id", "patient_id", "appointment_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["id", 2], ["physician_id", 2], ["patient_id", 3], ["appointment_date", "2001-11-11 00:00:00"], ["created_at", "2021-12-14 13:46:12.726299"], ["updated_at", "2021-12-14 13:46:12.726299"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAppointment Create (0.4ms)[0m  [1m[32mINSERT INTO "appointments" ("id", "physician_id", "patient_id", "appointment_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["id", 3], ["physician_id", 2], ["patient_id", 3], ["appointment_date", "2001-11-11 00:00:00"], ["created_at", "2021-12-14 13:46:22.116182"], ["updated_at", "2021-12-14 13:46:22.116182"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhysician Create (0.4ms)[0m  [1m[32mINSERT INTO "physicians" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Test22"], ["created_at", "2021-12-14 13:46:50.881586"], ["updated_at", "2021-12-14 13:46:50.881586"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mAppointment Load (0.4ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments" WHERE "appointments"."physician_id" = $1[0m  [["physician_id", 1]]
+  [1m[36mAppointment Load (0.9ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments" WHERE "appointments"."physician_id" = $1[0m  [["physician_id", 1]]
+  [1m[36mAppointment Load (0.6ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments" WHERE "appointments"."physician_id" = $1[0m  [["physician_id", 1]]
+  [1m[36mAppointment Load (0.4ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments" WHERE "appointments"."physician_id" = $1 AND "appointments"."id" = $2[0m  [["physician_id", 1], ["id", 1]]
+  [1m[36mAppointment Load (0.6ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments" WHERE "appointments"."physician_id" = $1 AND "appointments"."id" = $2[0m  [["physician_id", 1], ["id", 3]]
+  [1m[36mPatient Load (0.8ms)[0m  [1m[34mSELECT "patients".* FROM "patients" WHERE "patients"."id" = $1[0m  [["id", 1]]
+  [1m[36mPatient Load (0.5ms)[0m  [1m[34mSELECT "patients"."id" FROM "patients"[0m
+  [1m[36mAppointment Load (0.3ms)[0m  [1m[34mSELECT "appointments"."patient_id" FROM "appointments" WHERE "appointments"."physician_id" = $1[0m  [["physician_id", 1]]
+  [1m[36mPatient Load (1.1ms)[0m  [1m[34mSELECT "patients".* FROM "patients" WHERE "patients"."id" IN (SELECT "appointments"."patient_id" FROM "appointments" WHERE "appointments"."physician_id" = $1)[0m  [["physician_id", 1]]
+  [1m[36mPatient Load (0.7ms)[0m  [1m[34mSELECT "patients".* FROM "patients" WHERE "patients"."id" IN (SELECT "appointments"."patient_id" FROM "appointments" WHERE "appointments"."physician_id" = $1)[0m  [["physician_id", 1]]
+  [1m[36mPatient Load (0.9ms)[0m  [1m[34mSELECT "patients"."name" FROM "patients" WHERE "patients"."id" IN (SELECT "appointments"."patient_id" FROM "appointments" WHERE "appointments"."physician_id" = $1)[0m  [["physician_id", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPatient Create (0.7ms)[0m  [1m[32mINSERT INTO "patients" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Test4"], ["created_at", "2021-12-14 14:14:18.245252"], ["updated_at", "2021-12-14 14:14:18.245252"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPatient Load (0.3ms)[0m  [1m[34mSELECT "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mAppointment Load (0.4ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPatient Load (0.4ms)[0m  [1m[34mSELECT "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPatient Load (0.3ms)[0m  [1m[34mSELECT "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPatient Load (0.4ms)[0m  [1m[34mSELECT "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPatient Load (0.3ms)[0m  [1m[34mSELECT "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhysician Load (0.5ms)[0m  [1m[34mSELECT "physicians".* FROM "physicians" WHERE "physicians"."id" = $1 LIMIT $2[0m  [["id", -1], ["LIMIT", 1]]
+  [1m[36mPatient Load (0.4ms)[0m  [1m[34mSELECT "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhysician Load (0.3ms)[0m  [1m[34mSELECT "physicians".* FROM "physicians" WHERE "physicians"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPatient Load (0.3ms)[0m  [1m[34mSELECT "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mAppointment Create (0.6ms)[0m  [1m[32mINSERT INTO "appointments" ("id", "physician_id", "patient_id", "appointment_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["id", 4], ["physician_id", 1], ["patient_id", 3], ["appointment_date", "2001-11-11 00:00:00"], ["created_at", "2021-12-14 14:17:25.719008"], ["updated_at", "2021-12-14 14:17:25.719008"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mAppointment Load (0.4ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments"[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhysician Load (0.3ms)[0m  [1m[34mSELECT "physicians".* FROM "physicians" WHERE "physicians"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPatient Load (0.3ms)[0m  [1m[34mSELECT "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mAppointment Update (1.6ms)[0m  [1m[33mUPDATE "appointments" SET "id" = $1, "patient_id" = $2, "updated_at" = $3 WHERE "appointments"."id" = $4[0m  [["id", 4], ["patient_id", 3], ["updated_at", "2021-12-14 14:17:40.034580"], ["id", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mAppointment Load (0.7ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhysician Load (0.3ms)[0m  [1m[34mSELECT "physicians".* FROM "physicians" WHERE "physicians"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mPatient Load (0.3ms)[0m  [1m[34mSELECT "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mAppointment Update (2.6ms)[0m  [1m[33mUPDATE "appointments" SET "id" = $1, "physician_id" = $2, "patient_id" = $3, "updated_at" = $4 WHERE "appointments"."id" = $5[0m  [["id", 4], ["physician_id", 2], ["patient_id", 3], ["updated_at", "2021-12-14 14:17:59.448495"], ["id", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mAppointment Load (0.5ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments"[0m
+  [1m[36mPatient Load (1.0ms)[0m  [1m[34mSELECT "patients".* FROM "patients" WHERE "patients"."id" IN (SELECT "appointments"."patient_id" FROM "appointments" WHERE "appointments"."physician_id" = $1)[0m  [["physician_id", 1]]
+  [1m[36mPatient Load (0.4ms)[0m  [1m[34mSELECT "patients".* FROM "patients"[0m
+  [1m[36mAppointment Load (0.5ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhysician Load (0.3ms)[0m  [1m[34mSELECT "physicians".* FROM "physicians" WHERE "physicians"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mPatient Load (0.4ms)[0m  [1m[34mSELECT "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mAppointment Create (1.3ms)[0m  [1m[32mINSERT INTO "appointments" ("physician_id", "patient_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["physician_id", 2], ["patient_id", 4], ["created_at", "2021-12-14 14:40:45.096879"], ["updated_at", "2021-12-14 14:40:45.096879"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhysician Load (0.3ms)[0m  [1m[34mSELECT "physicians".* FROM "physicians" WHERE "physicians"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mPatient Load (0.4ms)[0m  [1m[34mSELECT "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mAppointment Create (1.9ms)[0m  [1m[32mINSERT INTO "appointments" ("physician_id", "patient_id", "appointment_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["physician_id", 2], ["patient_id", 4], ["appointment_date", "2002-11-11 00:00:00"], ["created_at", "2021-12-14 14:41:16.862115"], ["updated_at", "2021-12-14 14:41:16.862115"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhysician Load (0.2ms)[0m  [1m[34mSELECT "physicians".* FROM "physicians" WHERE "physicians"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mPatient Load (0.4ms)[0m  [1m[34mSELECT "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mAppointment Create (0.6ms)[0m  [1m[32mINSERT INTO "appointments" ("id", "physician_id", "patient_id", "appointment_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["id", 5], ["physician_id", 2], ["patient_id", 4], ["appointment_date", "2002-11-11 00:00:00"], ["created_at", "2021-12-14 14:41:30.858102"], ["updated_at", "2021-12-14 14:41:30.858102"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mAppointment Load (0.4ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments"[0m
+  [1m[36mPatient Load (0.9ms)[0m  [1m[34mSELECT "patients".* FROM "patients" WHERE "patients"."id" IN (SELECT "appointments"."patient_id" FROM "appointments" WHERE "appointments"."physician_id" = $1)[0m  [["physician_id", 1]]
