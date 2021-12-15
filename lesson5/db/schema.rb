@@ -37,20 +37,20 @@ ActiveRecord::Schema.define(version: 2021_12_15_132513) do
 
   create_table "patients", force: :cascade do |t|
     t.string "first_name"
-    t.string "last_name"
-    t.integer "age"
-    t.string "email"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "last_name"
+    t.integer "age", default: 0, null: false
+    t.string "email"
   end
 
   create_table "physicians", force: :cascade do |t|
     t.string "first_name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
     t.string "last_name"
     t.string "phone"
     t.string "level"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
   end
 
 end

@@ -20,5 +20,8 @@ class AddDiagnosis < ActiveRecord::Migration[6.1]
       t.belongs_to :patient
       t.timestamps
     end
+
+    change_column :patients, :age, :integer, :null => false
+
   end
 end
