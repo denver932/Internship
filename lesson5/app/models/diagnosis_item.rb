@@ -1,4 +1,4 @@
 class DiagnosisItem < ApplicationRecord
-    belongs_to :patient
-    belongs_to :physician
+    belongs_to :patients
+    belongs_to :physicians
 end

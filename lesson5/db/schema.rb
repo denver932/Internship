@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 2021_12_15_132513) do
   end
 
   create_table "diagnosis_items", force: :cascade do |t|
-    t.string "content"
+    t.string "content", default: "Diagnosis", null: false
     t.bigint "physician_id"
     t.bigint "patient_id"
     t.datetime "created_at", precision: 6, null: false
@@ -36,21 +36,21 @@ ActiveRecord::Schema.define(version: 2021_12_15_132513) do
   end
 
   create_table "patients", force: :cascade do |t|
-    t.string "first_name"
+    t.string "first_name", default: "Your name", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "last_name"
-    t.integer "age", default: 0, null: false
-    t.string "email"
+    t.string "last_name", default: "Your last name", null: false
+    t.integer "age", default: 1, null: false
+    t.string "email", default: "Your email", null: false
   end
 
   create_table "physicians", force: :cascade do |t|
-    t.string "first_name"
+    t.string "first_name", default: "Your name", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "last_name"
-    t.string "phone"
-    t.string "level"
+    t.string "last_name", default: "Your last name", null: false
+    t.string "phone", default: "Your phone", null: false
+    t.string "level", default: "Your level", null: false
   end
 
 end
