@@ -1,4 +1,6 @@
 class DiagnosisItem < ApplicationRecord
-    belongs_to :patients
-    belongs_to :physicians
+    belongs_to :patient
+    belongs_to :physician
+
+    validates :content, length: { in: 1..200 }
 end
