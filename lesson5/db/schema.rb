@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_14_130243) do
+ActiveRecord::Schema.define(version: 2021_12_15_132513) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,16 +25,32 @@ ActiveRecord::Schema.define(version: 2021_12_14_130243) do
     t.index ["physician_id"], name: "index_appointments_on_physician_id"
   end
 
-  create_table "patients", force: :cascade do |t|
-    t.string "name"
+  create_table "diagnosis_items", force: :cascade do |t|
+    t.string "content", default: "", null: false
+    t.bigint "physician_id"
+    t.bigint "patient_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["patient_id"], name: "index_diagnosis_items_on_patient_id"
+    t.index ["physician_id"], name: "index_diagnosis_items_on_physician_id"
+  end
+
+  create_table "patients", force: :cascade do |t|
+    t.string "first_name", default: "", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "last_name", default: "", null: false
+    t.integer "age", default: 1, null: false
+    t.string "email", default: "", null: false
   end
 
   create_table "physicians", force: :cascade do |t|
-    t.string "name"
+    t.string "first_name", default: "", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "last_name", default: "", null: false
+    t.string "phone", default: "", null: false
+    t.string "level", default: "", null: false
   end
 
 end
