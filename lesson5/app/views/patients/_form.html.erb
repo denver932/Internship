@@ -1,0 +1,19 @@
+<%= form_with model: @patient do |form| %>
+    <p>
+        Имя<br>
+        <%= form.text_field(:first_name, {:class => 'form-control'} ) %>
+    </p>
+    <p>
+        Фамилия<br>
+        <%= form.text_field(:last_name, {:class => 'form-control'} ) %>
+    </p>
+    <p>
+        Возраст<br>
+        <%= form.text_field(:age, {:class => 'form-control'} ) %>
+    </p>
+    <p>
+        Email<br>
+        <%= form.text_field(:email, {:class => 'form-control'} ) %>
+    </p>
+    <%= form.submit({:class => 'btn btn-success'} ) %>
+<% end %>
