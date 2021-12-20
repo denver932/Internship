@@ -1,19 +1,19 @@
 <%= form_with model: @physician do |form| %>
-    <p>
+    <section>
         Имя<br>
         <%= form.text_field(:first_name, {:class => 'form-control'} ) %>
-    </p>
-    <p>
+    </section>
+    <section>
         Фамилия<br>
         <%= form.text_field(:last_name, {:class => 'form-control'} ) %>
-    </p>
-    <p>
+    </section>
+    <section>
         Уровень<br>
         <%= form.text_field(:level, {:class => 'form-control'} ) %>
-    </p>
-    <p>
+    </section>
+    <section>
         Телефон<br>
         <%= form.text_field(:phone, {:class => 'form-control'} ) %>
-    </p>
-    <%= form.submit({:class => 'btn btn-success'} ) %>
+    </section>
+    <%= form.submit({:class => 'btn btn-success mt-2'} ) %>
 <% end %>
