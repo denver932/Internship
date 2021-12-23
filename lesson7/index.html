@@ -25,33 +25,33 @@
           </article>
           <article>
               <h2><label>Email address</label></h2>
-              <input type = "email" name= "email" required placeholder="test@test.test">
+              <input type = "email" name= "email" placeholder="test@test.test">
           </article>
           <article>
               <h2><label>Password</label></h2>
-              <input type = "password" name= "password" placeholder="Password" required>
+              <input type = "password" name= "password" placeholder="Password"  minlength = "8">
           </article>
           <article>
               <h2><label>Phone</label></h2>
-              <input type = "phone" name= "phone" placeholder="Phone" required>
+              <input type = "phone" name= "phone" placeholder="Phone" minlength = "8">
           </article>
           <article>
             <form class = "otherForm">
               <h2><label>Full Name</label></h2>
-              <input type = "text" name= "firtsName" placeholder="First Name" required>
-              <input type = "text" name= "lastName" placeholder="Last Name" required>
+              <input type = "text" name= "firtsName" placeholder="First Name" minlength = "2">
+              <input type = "text" name= "lastName" placeholder="Last Name" minlength = "2">
             </form>
           </article>
           <article>
             <form class = "timeForm">
               <h2><label>What time is it</label></h2>
-              <input type = "time" name= "time" required>
+              <input type = "time" name= "time" minlength = "2">
             </form>
           </article>
           <article>
             <form class = "rangeForm">
               <h2><label>How much do you like forms?</label></h2>
-              <input type="range" name="range" required>
+              <input type="range" name="range">
             </form>
           </article>
           <h2>Select your languages</h2>
@@ -90,18 +90,18 @@
           </div>
           <h2>Address</h2>
           <article class = "address">
-            <input type="text" name="city" id="city" placeholder="City" required>
-            <input type="text" name="district" id="district" placeholder="District" required>
-            <input type="number" pattern="[0-9]{5}" placeholder="Postal code" min=10000 required>
-            <input type="text" name="street" id="street" placeholder="Street" class = "aStreet" required>
+            <input type="text" name="city" id="city" placeholder="City" minlength = "2">
+            <input type="text" name="district" id="district" placeholder="District" minlength = "2">
+            <input type="number" pattern="[0-9]{5}" placeholder="Postal code" min=10000 minlength = "5">
+            <input type="text" name="street" id="street" placeholder="Street" class = "aStreet" minlength = "2">
           </article>
           <article class = "fColor">
             <label for="color"><h2>Pick your favorite color:</h2></label>
-            <input type="color" required><br>
+            <input type="color"><br>
           </article>
           <article class = "bDay">
             <label for="date"><h2>Birth date: </h2></label>
-            <input type="date" required>
+            <input type="date">
           </article>
         </div>
 
