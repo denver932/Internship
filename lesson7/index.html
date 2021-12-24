@@ -9,13 +9,14 @@
   </head>
   <body>
     <div class = "container">
-      <header>
+      <form>
+      <div class = "header">
         <h1>Information &#129299</h1>
         <div class = "header-right">
-          <button type = "button" class = "btn1">&#128683</button>
-          <button type = "button" class = "btn2">Confirm</button>
+          <button type = "reset" class = "btn1">&#128683</button>
+          <button type = "submit" class = "btn2">Confirm</button>
         </div>
-      </header>
+      </div>
       <hr>
       <main>
         <div class = "pageLeft">
@@ -25,7 +26,7 @@
           </article>
           <article>
               <h2><label>Email address</label></h2>
-              <input type = "email" name= "email" placeholder="test@test.test">
+              <input type = "email" name= "email" id= "email" placeholder="test@test.test">
           </article>
           <article>
               <h2><label>Password</label></h2>
@@ -36,23 +37,23 @@
               <input type = "phone" name= "phone" placeholder="Phone" minlength = "8">
           </article>
           <article>
-            <form class = "otherForm">
+            <section class = "otherForm">
               <h2><label>Full Name</label></h2>
-              <input type = "text" name= "firtsName" placeholder="First Name" minlength = "2">
-              <input type = "text" name= "lastName" placeholder="Last Name" minlength = "2">
-            </form>
+              <input type = "text" name= "firstName" id = "firstName" placeholder="First Name" minlength = "2">
+              <input type = "text" name= "lastName" id = "lastName" placeholder="Last Name" minlength = "2">
+            </section>
           </article>
           <article>
-            <form class = "timeForm">
+            <section class = "timeForm">
               <h2><label>What time is it</label></h2>
               <input type = "time" name= "time" minlength = "2">
-            </form>
+            </section>
           </article>
           <article>
-            <form class = "rangeForm">
+            <section class = "rangeForm">
               <h2><label>How much do you like forms?</label></h2>
               <input type="range" name="range">
-            </form>
+            </section>
           </article>
           <h2>Select your languages</h2>
           <article class = "checkboxes">
@@ -76,15 +77,15 @@
               <label for="f1">$10-20</label>
             </div>
             <div class = "moneyRadio">
-              <input type="radio" id="f2" name="f2" value="f2">
+              <input type="radio" id="f2" name="f1" value="f2">
               <label for="f2">$20-40</label>
             </div>
             <div class = "moneyRadio">
-              <input type="radio" id="f3" name="f3" value="f3">
+              <input type="radio" id="f3" name="f1" value="f3">
               <label for="f3">$40-80</label>
             </div>
             <div class = "moneyRadio">
-              <input type="radio" id="f4" name="f4" value="f4">
+              <input type="radio" id="f4" name="f1" value="f4">
               <label for="f4"> >$80</label>
             </div>
           </div>
@@ -101,7 +102,7 @@
           </article>
           <article class = "bDay">
             <label for="date"><h2>Birth date: </h2></label>
-            <input type="date">
+            <input type="date" minlength = "6">
           </article>
         </div>
 
@@ -111,7 +112,7 @@
           <div class = "photo">
             <form enctype="multipart/form-data" method="post">
               <img src="img/Avatar.png" class="avatar">
-              <p><input type="file" name="profile-photo" id="profile-photo" accept="img/png" required></p>
+              <p><input type="file" name="profile-photo" id="profile-photo" accept="img/png"></p>
             </form>
           </div>
           <div class = "choose">
@@ -134,9 +135,15 @@
           </div>
         </div>
       </main>
-      <footer>
-
-      </footer>
+    </form>
     </div>
+    <script>
+      document.addEventListener('click', function() {
+        const array = [...document.querySelectorAll('input')];
+        for (let i = 0; 0 < array.length; i++) {
+            console.log(array[i].value);
+        }
+      })
+    </script>
   </body>
 </html>
