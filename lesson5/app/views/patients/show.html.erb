@@ -1,15 +1,19 @@
-<h3>
+
+<div class = "card">
+  <div class = "card-header">
     <h2>Patient №<%= @patient.id%></h2>
-    <hr>
+  </div>
+  <div class ="card-body">
     <p><b>Name: </b><%= @patient.first_name%></p>
     <p><b>Last Name: </b><%= @patient.last_name%></p>
     <p><b>Age: </b><%= @patient.age%> y.o.</p>
     <p><b>Email: </b><%= @patient.email%></p>
-</h3>
-<div class="d-flex flex-row ">
-  <%= link_to "Edit", edit_patient_path(@patient), :class => 'btn btn-warning  m-1'%>
-  <%= link_to "Delete", patient_path(@patient),
-    method: :delete, data: {confirm: "Вы хотите удалить пациента из системы?"},
-    :class => 'btn btn-danger m-1'%>
+  </div>
+  <div class=" card-footer">
+    <%= link_to "Edit", edit_patient_path(@patient), :class => 'btn btn-warning m-1 '%>
+    <%= link_to "Delete", patient_path(@patient),
+        method: :delete, data: {confirm: "Вы хотите удалить пациента из системы?"},
+        :class => 'btn btn-danger'%>
+  </div>
 </div>
 
