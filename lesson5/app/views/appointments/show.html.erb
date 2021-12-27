@@ -1,0 +1,16 @@
+<div class = "card">
+  <div class = "card-header">
+    <h2>Appointment №<%= @appointment.id%></h2>
+  </div>
+  <div class ="card-body">
+    <p><b>Patient: </b><%= @appointment.patient.first_name%></p>
+    <p><b>Physician: </b><%= @appointment.physician.first_name%></p>
+    <p><b>Date: </b><%= @appointment.appointment_date%></p>
+  </div>
+  <div class=" card-footer">
+    <%= link_to "Edit", edit_appointment_path(@appointment), :class => 'btn btn-warning m-1 '%>
+    <%= link_to "Delete", appointment_path(@appointment),
+        method: :delete, data: {confirm: "Вы хотите удалить встречу из системы?"},
+        :class => 'btn btn-danger'%>
+  </div>
+</div>

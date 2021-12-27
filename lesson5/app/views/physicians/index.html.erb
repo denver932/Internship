@@ -1,3 +1,6 @@
-<% @physicians.each do |physician| %>
-    <p><h3><%= link_to physician.first_name, physician%></h3></p>
-<% end %>
+<div class = "card-group">
+  <% @physicians.each do |physician| %>
+    <%=render "card", physician: physician%>
+  <% end %>
+</div>
+<%= link_to "Create new physician", new_physician_path(@physician), :class => 'btn btn-success mt-4 '%>

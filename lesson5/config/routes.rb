@@ -6,4 +6,10 @@ Rails.application.routes.draw do
   resources :physicians do
     get "physicians" => "physicians#index" , as: "physicians"
   end
+  resources :appointments do
+    get "appointments" => "appointments#index" , as: "appointments"
+  end
+  resources :diagnosisitems do
+    get "diagnosisItems" => "diagnosisitems#index" , as: "diagnosisitems"
+  end
 end

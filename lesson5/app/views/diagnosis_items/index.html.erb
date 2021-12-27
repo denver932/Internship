@@ -1,0 +1,6 @@
+<div class = "card-group">
+  <% @diagnosisitems.each do |diagnosisitem| %>
+    <%=render "card", diagnosisitem:diagnosisitem%>
+  <% end %>
+</div>
+<%= link_to "Create new Diagnosis item", new_diagnosisitem_path(@diagnosisitem), :class => 'btn btn-success mt-4 '%>
