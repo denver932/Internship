@@ -1,4 +1,4 @@
-<%= form_with model: @diagnosisitem do |form| %>
+<%= form_with model: @diagnosis_item do |form| %>
     <section>
         Пациент<br>
         <%= form.number_field(:patient_id, {:class => 'form-control'} ) %>
@@ -7,7 +7,7 @@
         Номер врача<br>
         <%= form.number_field(:physician_id, {:class => 'form-control'} ) %>
     </section>
-    <section>
+    <section class = "mb-3">
         Описание<br>
         <%= form.text_field(:content, {:class => 'form-control'} ) %>
     </section>

@@ -1,47 +1,47 @@
 class DiagnosisItemsController < ApplicationController
   def index
-    @diagnosisitems = DiagnosisItem.all
+    @diagnosis_items = DiagnosisItem.all
   end
 
   def create
-    @diagnosisitem = DiagnosisItem.new(diagnosisitem_params)
-    if @diagnosisitem.save
-      redirect_to @diagnosisitem
+    @diagnosis_item = DiagnosisItem.new(diagnosis_item_params)
+    if @diagnosis_item.save
+      redirect_to @diagnosis_item
     else
       render :new
     end
   end
 
   def show
-    @diagnosisitem = DiagnosisItem.find(params[:id])
+    @diagnosis_item = DiagnosisItem.find(params[:id])
   end
 
   def new
-    @diagnosisitem = DiagnosisItem.new
+    @diagnosis_item = DiagnosisItem.new
   end
 
   def edit
-    @diagnosisitem = DiagnosisItem.find(params[:id])
+    @diagnosis_item = DiagnosisItem.find(params[:id])
   end
 
   def update
-    @diagnosisitem = DiagnosisItem.find(params[:id])
-    if @diagnosisitem.update(diagnosisitem_params)
-      redirect_to @diagnosisitem
+    @diagnosis_item = DiagnosisItem.find(params[:id])
+    if @diagnosis_item.update(diagnosis_item_params)
+      redirect_to @diagnosis_item
     else
       render :edit
     end
   end
 
   def destroy
-    @diagnosisitem = DiagnosisItem.find(params[:id])
-    @diagnosisitem.destroy
-    redirect_to diagnosisitems_path
+    @diagnosis_item = DiagnosisItem.find(params[:id])
+    @diagnosis_item.destroy
+    redirect_to diagnosis_items_path
   end
 
   private
 
-    def diagnosisitem_params
-      params.require(:diagnosisitem).permit(:patient_id, :physician_id, :content)
+    def diagnosis_item_params
+      params.require(:diagnosis_item).permit(:patient_id, :physician_id, :content)
     end
 end

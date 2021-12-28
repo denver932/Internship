@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   resources :appointments do
     get "appointments" => "appointments#index" , as: "appointments"
   end
-  resources :diagnosisitems do
-    get "diagnosisItems" => "diagnosisitems#index" , as: "diagnosisitems"
+  resources :diagnosis_items do
+    get "diagnosis_items" => "diagnosis_items#index" , as: "diagnosis_items"
   end
 end
