@@ -12,12 +12,12 @@ class PhysiciansController < ApplicationController
     end
 
     def create
-        @physician = Physician.new(physician_params)
-        if @physician.save
-            redirect_to @physician
-          else
-            render :new
-          end
+      @physician = Physician.new(physician_params)
+      if @physician.save
+        redirect_to @physician
+      else
+        render :new
+      end
     end
 
     def edit
