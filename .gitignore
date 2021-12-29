@@ -1,3 +1,2 @@
 *.DS_Store
-lesson5/tmp/
-*tmp/
+/lesson5/tmp
