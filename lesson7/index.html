@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <title>FormFormForm</title>
+  </head>
+  <body>
+    <div class = "container">
+      <form>
+      <div class = "header">
+        <h1>Information &#129299</h1>
+        <div class = "header-right">
+          <button type = "reset" class = "btn1">&#128683</button>
+          <button type = "submit" class = "btn2">Confirm</button>
+        </div>
+      </div>
+      <hr>
+      <main>
+        <div class = "pageLeft">
+          <article>
+            <h2>User information</h2>
+              <h3>Enter the required information below to register. You can change it anytime you want.</h3>
+          </article>
+          <article>
+              <h2><label>Email address</label></h2>
+              <input type = "email" name= "email" id= "email" placeholder="test@test.test">
+          </article>
+          <article>
+              <h2><label>Password</label></h2>
+              <input type = "password" name= "password" placeholder="Password"  minlength = "8">
+          </article>
+          <article>
+              <h2><label>Phone</label></h2>
+              <input type = "phone" name= "phone" placeholder="Phone" minlength = "8">
+          </article>
+          <article>
+            <section class = "otherForm">
+              <h2><label>Full Name</label></h2>
+              <input type = "text" name= "firstName" id = "firstName" placeholder="First Name" minlength = "2">
+              <input type = "text" name= "lastName" id = "lastName" placeholder="Last Name" minlength = "2">
+            </section>
+          </article>
+          <article>
+            <section class = "timeForm">
+              <h2><label>What time is it</label></h2>
+              <input type = "time" name= "time" minlength = "2">
+            </section>
+          </article>
+          <article>
+            <section class = "rangeForm">
+              <h2><label>How much do you like forms?</label></h2>
+              <input type="range" name="range">
+            </section>
+          </article>
+          <h2>Select your languages</h2>
+          <article class = "checkboxes">
+            <div>
+              <input type="checkbox" class = "custom-checkbox" id="en" name="en">
+              <label for="en">English</label>
+            </div>
+            <div>
+              <input type="checkbox" class = "custom-checkbox" id="ua" name="ua">
+              <label for="ua">Ukrainian</label>
+            </div>
+            <div>
+              <input type="checkbox" class = "custom-checkbox" id="es" name="es">
+              <label for="es">Spanish</label>
+            </div>
+          </article>
+          <h2>Hourly rate</h2>
+          <div class = "money">
+            <div class = "moneyRadio">
+              <input type="radio" id="f1" name="f1" value="f1" checked>
+              <label for="f1">$10-20</label>
+            </div>
+            <div class = "moneyRadio">
+              <input type="radio" id="f2" name="f1" value="f2">
+              <label for="f2">$20-40</label>
+            </div>
+            <div class = "moneyRadio">
+              <input type="radio" id="f3" name="f1" value="f3">
+              <label for="f3">$40-80</label>
+            </div>
+            <div class = "moneyRadio">
+              <input type="radio" id="f4" name="f1" value="f4">
+              <label for="f4"> >$80</label>
+            </div>
+          </div>
+          <h2>Address</h2>
+          <article class = "address">
+            <input type="text" name="city" id="city" placeholder="City" minlength = "2">
+            <input type="text" name="district" id="district" placeholder="District" minlength = "2">
+            <input type="number" pattern="[0-9]{5}" placeholder="Postal code" min=10000 minlength = "5">
+            <input type="text" name="street" id="street" placeholder="Street" class = "aStreet" minlength = "2">
+          </article>
+          <article class = "fColor">
+            <label for="color"><h2>Pick your favorite color:</h2></label>
+            <input type="color"><br>
+          </article>
+          <article class = "bDay">
+            <label for="date"><h2>Birth date: </h2></label>
+            <input type="date" minlength = "6">
+          </article>
+        </div>
+
+
+        <div class = "pageRight">
+          <h2>Profile photo</h2>
+          <div class = "photo">
+            <form enctype="multipart/form-data" method="post">
+              <img src="img/Avatar.png" class="avatar">
+              <p><input type="file" name="profile-photo" id="profile-photo" accept="img/png"></p>
+            </form>
+          </div>
+          <div class = "choose">
+            <label for="pet-select"><h2>Choose your main interest</h2></label>
+            <select name="pets" id="pet-select">
+              <option value="Education">Education &#127891</option>
+              <option value="Science">Yeah, science! &#128640</option>
+              <option value="Art">Art &#127917</option>
+              <option value="Politics">Politics &#128499 </option>
+              <option value="Sport">Sport &#9917 </option>
+              <option value="Games">Games &#127918</option>
+              <option value="Animals">Animals &#128062 </option>
+              <option value="Health">Health &#127973</option>
+              <option value="Business">Business &#128084</option>
+            </select>
+          </div>
+          <div class="texts">
+            <label for="story"><h2>Describe yourself</h2></label>
+            <textarea id="text" name="text" cols = "25" placeholder=" Im the best person in the world..."></textarea>
+          </div>
+        </div>
+      </main>
+    </form>
+    </div>
+    <script>
+      document.addEventListener('click', function() {
+        const array = [...document.querySelectorAll('input')];
+        for (let i = 0; 0 < array.length; i++) {
+            console.log(array[i].value);
+        }
+      })
+    </script>
+  </body>
+</html>
