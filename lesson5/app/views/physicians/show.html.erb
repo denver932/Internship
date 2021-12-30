@@ -1,16 +1,4 @@
-<div class = "card">
-  <div class = "card-header">
-    <h2>Physician №<%= @physician.id %></h2>
-  </div>
-  <div class ="card-body">
-    <p><b>Name: </b><%= @physician.first_name %></p>
-    <p><b>Last Name: </b><%= @physician.last_name %></p>
-    <p><b>Level: </b><%= @physician.level %></p>
-    <p><b>Phone: </b><%= @physician.phone %></p>
-  </div>
-  <div class=" card-footer">
-    <%= link_to "Edit", edit_physician_path(@physician), class: 'btn btn-warning m-1 '%>
-    <%= link_to "Delete", physician_path(@physician),
-        method: :destroy, data: {confirm: "Вы хотите удалить врача из системы?"}, class: 'btn btn-danger' %>
-  </div>
-</div>
+<%=render "card", physician: @physician %>
+<%= link_to "Edit", edit_physician_path(@physician), class: 'btn btn-warning m-1' %>
+<%= link_to "Delete", physician_path(@physician), method: :delete, data: {confirm: "Вы хотите удалить врача из системы?"}, class: 'btn btn-danger' %>
+

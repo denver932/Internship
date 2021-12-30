@@ -18,10 +18,14 @@ class DiagnosisItemsController < ApplicationController
 
   def new
     @diagnosis_item = DiagnosisItem.new
+    @patients = Patient.all
+    @physicians = Physician.all
   end
 
   def edit
     @diagnosis_item = DiagnosisItem.find(params[:id])
+    @patients = Patient.all
+    @physicians = Physician.all
   end
 
   def update
@@ -42,6 +46,6 @@ class DiagnosisItemsController < ApplicationController
   private
 
   def diagnosis_item_params
-    params.require(:diagnosis_item).permit( :patient_id, :physician_id, :content )
+    params.require(:diagnosis_item).permit(:patient_id, :physician_id, :content)
   end
 end

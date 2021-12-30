@@ -18,10 +18,14 @@ class AppointmentsController < ApplicationController
 
   def new
     @appointment = Appointment.new
+    @patients = Patient.all
+    @physicians = Physician.all
   end
 
   def edit
     @appointment = Appointment.find(params[:id])
+    @patients = Patient.all
+    @physicians = Physician.all
   end
 
   def update
@@ -42,6 +46,6 @@ class AppointmentsController < ApplicationController
   private
 
   def appointment_params
-    params.require(:appointment).permit( :patient_id, :physician_id, :appointment_date )
+    params.require(:appointment).permit(:patient_id, :physician_id, :appointment_date)
   end
 end
