@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
-  get "/articles", to: "articles#index"
-
+  resources :patients
+  resources :physicians
 end
