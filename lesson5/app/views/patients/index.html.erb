@@ -1,6 +1,6 @@
 <div class = "card-group">
   <% @patients.each do |patient| %>
-    <%=render "card", patient: patient%>
+    <%=render "card", patient: patient %>
   <% end %>
 </div>
 <%= link_to "Create new patient", new_patient_path(@patient), :class => 'btn btn-success mt-4 '%>

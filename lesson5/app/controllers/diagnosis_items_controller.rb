@@ -42,6 +42,6 @@ class DiagnosisItemsController < ApplicationController
   private
 
     def diagnosis_item_params
-      params.require(:diagnosis_item).permit(:patient_id, :physician_id, :content)
+      params.require(:diagnosis_item).permit( :patient_id, :physician_id, :content )
     end
 end
