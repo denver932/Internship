@@ -9,6 +9,5 @@
 <div class="d-flex flex-row ">
   <%= link_to "Edit", edit_physician_path(@physician), :class => 'btn btn-warning  m-1'%>
   <%= link_to "Delete", physician_path(@physician),
-    method: :delete, data: {confirm: "Вы хотите удалить врача из системы?"},
-    :class => 'btn btn-danger m-1'%>
+    method: :delete, data: {confirm: "Вы хотите удалить врача из системы?"}, class: 'btn btn-danger m-1'%>
 </div>
