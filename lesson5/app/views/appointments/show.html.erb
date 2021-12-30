@@ -8,9 +8,8 @@
     <p><b>Date: </b><%= @appointment.appointment_date %></p>
   </div>
   <div class=" card-footer">
-    <%= link_to "Edit", edit_appointment_path(@appointment), :class => 'btn btn-warning m-1 '%>
+    <%= link_to "Edit", edit_appointment_path(@appointment), class: 'btn btn-warning m-1 '%>
     <%= link_to "Delete", appointment_path(@appointment),
-        method: :delete, data: { confirm: "Вы хотите удалить встречу из системы?" },
-        :class => 'btn btn-danger' %>
+        method: :delete, data: { confirm: "Вы хотите удалить встречу из системы?" }, class: 'btn btn-danger' %>
   </div>
 </div>

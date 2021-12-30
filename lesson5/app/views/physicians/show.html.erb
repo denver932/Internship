@@ -9,9 +9,8 @@
     <p><b>Phone: </b><%= @physician.phone %></p>
   </div>
   <div class=" card-footer">
-    <%= link_to "Edit", edit_physician_path(@physician), :class => 'btn btn-warning m-1 '%>
+    <%= link_to "Edit", edit_physician_path(@physician), class: 'btn btn-warning m-1 '%>
     <%= link_to "Delete", physician_path(@physician),
-        method: :destroy, data: {confirm: "Вы хотите удалить врача из системы?"},
-        :class => 'btn btn-danger' %>
+        method: :destroy, data: {confirm: "Вы хотите удалить врача из системы?"}, class: 'btn btn-danger' %>
   </div>
 </div>

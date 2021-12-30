@@ -1,14 +1,14 @@
 <%= form_with model: @diagnosis_item do |form| %>
     <section>
-        Пациент<br>
+        Пациент
         <%= form.number_field( :patient_id, class: 'form-control' ) %>
     </section>
     <section>
-        Номер врача<br>
+        Номер врача
         <%= form.number_field( :physician_id, class: 'form-control' ) %>
     </section>
     <section class = "mb-3">
-        Описание<br>
+        Описание
         <%= form.text_field( :content, class:'form-control' ) %>
     </section>
     <%= form.submit( class: 'btn btn-success' ) %>
