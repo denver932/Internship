@@ -2,7 +2,7 @@
   <div class = "card-header">
   <h4><%= link_to "Appointment №" + appointment.id.to_s, appointment %></h4>
   </div>
-  <div class ="card-body">
+  <div class = "card-body">
     <p><b>Patient: </b><%= appointment.patient.first_name %></p>
     <p><b>Physician: </b><%= appointment.physician.first_name %></p>
     <p><b>Date: </b><%= appointment.appointment_date %></p>
