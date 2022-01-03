@@ -1,5 +1,5 @@
 class Physician < ApplicationRecord
-  LEVEL = ["junior", "middle", "senior"]
+  LEVEL = ['junior', 'middle', 'senior']
 
   has_many :appointments
   has_many :diagnosis_items
