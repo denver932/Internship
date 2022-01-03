@@ -1,19 +1,19 @@
 <%= form_with model: @patient do |form| %>
   <section>
     Имя
-    <%= form.text_field( :first_name, class: 'form-control' ) %>
+    <%= form.text_field(:first_name, class: 'form-control') %>
   </section>
   <section>
     Фамилия
-    <%= form.text_field( :last_name, class: 'form-control' ) %>
+    <%= form.text_field(:last_name, class: 'form-control') %>
   </section>
   <section>
     Возраст
-    <%= form.number_field( :age, class: 'form-control' ) %>
+    <%= form.number_field(:age, class: 'form-control') %>
   </section>
   <section>
     Email
-    <%= form.text_field( :email, class: 'form-control' ) %>
+    <%= form.text_field(:email, class: 'form-control') %>
   </section>
-  <%= form.submit( class: 'btn btn-success' ) %>
+  <%= form.submit(class: 'btn btn-success') %>
 <% end %>

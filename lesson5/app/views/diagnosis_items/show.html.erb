@@ -1,0 +1,4 @@
+<%= render "card", diagnosis_item: @diagnosis_item %>
+<%= link_to "Edit", edit_diagnosis_item_path(@diagnosis_item), class: 'btn btn-warning m-1' %>
+<%= link_to "Delete", diagnosis_item_path(@diagnosis_item), method: :delete, data: {confirm: "Вы хотите удалить встречу из системы?"}, class: 'btn btn-danger' %>
+
