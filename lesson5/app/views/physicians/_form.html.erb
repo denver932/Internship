@@ -6,7 +6,7 @@
     <%= form.input :last_name, placeholder: 'Your last name', input_html: {class: 'w-50'} %>
   </section>
   <section>
-    <%= form.input :level, collection: ['junior', 'middle', 'senior'], include_blank: false, input_html: {class: 'w-50'} %>
+    <%= form.input :level, collection: Physician::LEVEL, include_blank: false, input_html: {class: 'w-50'} %>
   </section>
   <section>
     <%= form.input :phone, placeholder: '+380XXXXXXXXX', input_html: {class: 'w-50'} %>
