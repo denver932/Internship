@@ -1,6 +1,4 @@
 *.DS_Store
-/lesson5/tmp
-/tmp
-/lesson5/log
-/log
+**/lesson5/tmp/
+**/lesson5/*/log/
 
