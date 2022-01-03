@@ -1,15 +1,12 @@
-<%= form_with model: @appointment do |form| %>
+<%= simple_form_for @appointment do |form| %>
   <section>
-    Patient
-    <%= form.collection_select :patient_id, @patients, :id, :first_name %>
+    <%= form.association :patient, collection: @patients, label_method: :first_name, value_method: :id, label: "Patient", include_blank: false, input_html: {class: 'w-50'} %>
   </section>
   <section>
-    Physician
-    <%= form.collection_select :physician_id, @physicians, :id, :first_name %>
+    <%= form.association :physician, collection: @physicians, label_method: :first_name, value_method: :id, label: "Physician", include_blank: false, input_html: {class: 'w-50'} %>
   </section>
   <section>
-    Date
-    <%= form.datetime_field(:appointment_date, class: 'form-control') %>
+    <%= form.input :appointment_date, as: :date, class: 'w-20' %>
   </section>
-  <%= form.submit(class: 'btn btn-success') %>
+  <%= form.button :submit, class: 'btn btn-success mt-3' %>
 <% end %>
