@@ -1,19 +1,15 @@
-<%= form_with model: @physician do |form| %>
+<%= simple_form_for @physician do |form| %>
   <section>
-    Имя
-    <%= form.text_field(:first_name, class: 'form-control') %>
+    <%= form.input :first_name, placeholder: 'Your first name', input_html: {class: 'w-50'} %>
   </section>
   <section>
-    Фамилия
-    <%= form.text_field(:last_name, class: 'form-control') %>
+    <%= form.input :last_name, placeholder: 'Your last name', input_html: {class: 'w-50'} %>
   </section>
   <section>
-    Уровень
-    <%= form.select :level, ['junior', 'middle', 'senior'] %>
+    <%= form.input :level, collection: Physician::LEVEL, include_blank: false, input_html: {class: 'w-50'} %>
   </section>
   <section>
-    Телефон
-    <%= form.text_field(:phone, class: 'form-control') %>
+    <%= form.input :phone, placeholder: '+380XXXXXXXXX', input_html: {class: 'w-50'} %>
   </section>
-  <%= form.submit(class: 'btn btn-success mt-2') %>
+  <%= form.button :submit, class: 'btn btn-success mt-3' %>
 <% end %>

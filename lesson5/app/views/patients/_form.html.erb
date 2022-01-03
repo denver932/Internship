@@ -1,19 +1,15 @@
-<%= form_with model: @patient do |form| %>
+<%= simple_form_for @patient do |form| %>
   <section>
-    Имя
-    <%= form.text_field(:first_name, class: 'form-control') %>
+    <%= form.input :first_name, placeholder: 'Your first name', input_html: {class: 'w-50'} %>
   </section>
   <section>
-    Фамилия
-    <%= form.text_field(:last_name, class: 'form-control') %>
+    <%= form.input :last_name, placeholder: 'Your last name', input_html: {class: 'w-50'} %>
   </section>
   <section>
-    Возраст
-    <%= form.number_field(:age, class: 'form-control') %>
+    <%= form.input :age, input_html: {class: 'w-50'} %>
   </section>
   <section>
-    Email
-    <%= form.text_field(:email, class: 'form-control') %>
+    <%= form.input :email, placeholder: 'example@test.com', input_html: {class: 'w-50'} %>
   </section>
-  <%= form.submit(class: 'btn btn-success') %>
+  <%= form.button :submit, class: 'btn btn-success mt-3' %>
 <% end %>
