@@ -1,9 +1,9 @@
 <%= simple_form_for @diagnosis_item do |form| %>
   <section>
-    <%= form.association :patient, collection: @patients, label_method: :first_name, value_method: :id, label: "Patient", include_blank: false, input_html: {class: 'w-50'}  %>
+    <%= form.association :patient, collection: @patients, label_method: :first_name, value_method: :id, label: "Patient", include_blank: false, input_html: {class: 'w-50'} %>
   </section>
   <section>
-    <%= form.association :physician, collection: @physicians, label_method: :first_name, value_method: :id, label: "Physician", include_blank: false, input_html: {class: 'w-50'}  %>
+    <%= form.association :physician, collection: @physicians, label_method: :first_name, value_method: :id, label: "Physician", include_blank: false, input_html: {class: 'w-50'} %>
   </section>
   <section>
     <%= form.input :content, input_html: {class: 'w-50 py-5'} %>

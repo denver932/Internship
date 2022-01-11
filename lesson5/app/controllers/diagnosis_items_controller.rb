@@ -1,4 +1,5 @@
 class DiagnosisItemsController < ApplicationController
+
   def index
     @diagnosis_items = DiagnosisItem.all
   end
