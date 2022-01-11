@@ -5,4 +5,5 @@ class ApplicationController < ActionController::Base
     flash[:alert] = "Access denided"
     redirect_to root_url
   end
+
 end
