@@ -3,4 +3,6 @@
     <%= render "card", diagnosis_item: diagnosis_item %>
   <% end %>
 </div>
-<%= link_to "Create new Diagnosis item", new_diagnosis_item_path(@diagnosis_item), class: 'btn btn-success mt-4' %>
+<% if can? :create, @diagnosis_item %>
+  <%= link_to "Create new Diagnosis item", new_diagnosis_item_path(@diagnosis_item), class: 'btn btn-success mt-4' %>
+<% end %>
