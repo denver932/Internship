@@ -1,12 +1,7 @@
 class AppointmentsController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:index]
-
-  def index
-    @appointments = Appointment.all
-  end
+  load_and_authorize_resource
 
   def create
-    @appointment = Appointment.new(appointment_params)
     if @appointment.save
       redirect_to @appointment
     else
@@ -14,24 +9,17 @@ class AppointmentsController < ApplicationController
     end
   end
 
-  def show
-    @appointment = Appointment.find(params[:id])
-  end
-
   def new
-    @appointment = Appointment.new
     @patients = Patient.all
     @physicians = Physician.all
   end
 
   def edit
-    @appointment = Appointment.find(params[:id])
     @patients = Patient.all
     @physicians = Physician.all
   end
 
   def update
-    @appointment = Appointment.find(params[:id])
     if @appointment.update(appointment_params)
       redirect_to @appointment
     else
@@ -40,7 +28,6 @@ class AppointmentsController < ApplicationController
   end
 
   def destroy
-    @appointment = Appointment.find(params[:id])
     @appointment.destroy
     redirect_to appointments_path
   end

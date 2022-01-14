@@ -3,4 +3,6 @@
     <%= render "card", appointment: appointment %>
   <% end %>
 </div>
-<%= link_to "Create new appointment", new_appointment_path(@appointment), class: 'btn btn-success mt-4' %>
+<% if can? :create, @appointment %>
+  <%= link_to "Create new appointment", new_appointment_path(@appointment), class: 'btn btn-success mt-4' %>
+<% end %>
