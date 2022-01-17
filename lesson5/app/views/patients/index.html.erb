@@ -1,6 +1,16 @@
 <div class = "card-group">
   <% @patients.each do |patient| %>
     <%= render "card", patient: patient %>
+    <% if can? :read, DiagnosisItem %>
+      <br>
+        <button class="btn btn-outline-primary" id="<%= patient.id %>" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="#collapseExample">
+          Show diagnosis items
+        </button>
+        <div class="collapse load" id="#collapseExample">
+          <div class="card card-body">
+          </div>
+        </div>
+    <% end %>
   <% end %>
 </div>
 <% if can? :create, @patient %>
