@@ -7,11 +7,11 @@
       <% if can? :read, DiagnosisItem %>
         <div class = "card-footer">
           <br>
-            <button class="btn btn-outline-primary" id="<%= patient.id %>" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="#collapseExample">
+            <button class = "btn btn-outline-primary show" id = "<%= patient.id %>" type = "button" data-bs-toggle = "collapse" data-bs-target = "#id<%= patient.id %>" aria-expanded = "false" aria-controls = "id<%= patient.id %>">
               Show diagnosis items
             </button>
-            <div class="collapse load" id="#collapseExample">
-              <div class="card card-body">
+            <div class = "collapse load" id = "id<%= patient.id %>">
+              <div class = "card card-body", id = "show-items">
               </div>
             </div>
         </div>
