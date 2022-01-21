@@ -1,6 +1,22 @@
 <div class = "card-group">
   <% @patients.each do |patient| %>
-    <%= render "card", patient: patient %>
+    <div class = "card">
+      <div class = "card-body">
+        <%= render "card", patient: patient %>
+      </div>
+      <% if can? :read, DiagnosisItem %>
+        <div class = "card-footer">
+          <br>
+            <button class = "btn btn-outline-primary show" id = "<%= patient.id %>" type = "button" data-bs-toggle = "collapse" data-bs-target = "#id<%= patient.id %>" aria-expanded = "false" aria-controls = "id<%= patient.id %>">
+              Show diagnosis items
+            </button>
+            <div class = "collapse load" id = "id<%= patient.id %>">
+              <div class="card card-body", id="show-items<%= patient.id %>">
+              </div>
+            </div>
+        </div>
+      <% end %>
+    </div>
   <% end %>
 </div>
 <% if can? :create, @patient %>

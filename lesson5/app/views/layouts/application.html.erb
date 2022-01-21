@@ -3,29 +3,32 @@
   <head>
     <title>Hospital</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   </head>
-  <header>
+  <body class = "bg-light">
+    <header>
     <nav class = "navbar navbar-expand navbar-dark bg-dark p-3 shadow">
       <a class = "navbar-brand" href="#">Hospital</a>
         <% if user_signed_in? %>
         <ul class = "navbar-nav">
           <li class = "nav-item active">
-            <%= link_to "Patients", patients_path, class:'nav-link' %></span>
+            <%= link_to "Patients", patients_path, class:'nav-link' %>
           </li>
           <li class = "nav-item">
-            <%= link_to "Physicians", physicians_path, class:'nav-link' %></span>
+            <%= link_to "Physicians", physicians_path, class:'nav-link' %>
           </li>
           <li class = "nav-item active">
-            <%= link_to "Appointments", appointments_path, class:'nav-link' %></span>
+            <%= link_to "Appointments", appointments_path, class:'nav-link' %>
           </li>
           <li class = "nav-item active">
-            <%= link_to "Diagnosis items", diagnosis_items_path, class:'nav-link' %></span>
+            <%= link_to "Diagnosis items", diagnosis_items_path, class:'nav-link' %>
           </li>
         </ul>
         <ul class = "navbar-nav d-flex justify-content-end">
@@ -53,7 +56,6 @@
   <% if user_signed_in?%>
     Hello, <%= current_user.name%>
   <% end %>
-  <body class = "bg-light">
     <div class = "container px-5 mt-5 shadow-lg py-3">
       <p class = "alert-success w-25 d-flex justify-content-center shadow"><%= notice %></p>
       <p class = "alert-success"><%= alert %></p>
@@ -63,4 +65,5 @@
       </section>
     </div>
   </body>
+
 </html>
