@@ -10,8 +10,8 @@
             <button class = "btn btn-outline-primary show" id = "<%= patient.id %>" type = "button" data-bs-toggle = "collapse" data-bs-target = "#id<%= patient.id %>" aria-expanded = "false" aria-controls = "id<%= patient.id %>">
               Show diagnosis items
             </button>
-            <div class = "collapse" id = "id<%= patient.id %>">
-              <div class = "card card-body load mt-2 w-75", id = "show-items">
+            <div class = "collapse load" id = "id<%= patient.id %>">
+              <div class="card card-body", id="show-items<%= patient.id %>">
               </div>
             </div>
         </div>
